@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prénom Nom - Calcul Prix Total</title>
+    <link rel="stylesheet" href="mini-default.min.css">
+    <link rel="stylesheet" href="update-mini.css">
+    <link rel="stylesheet" href="application.css">
+    <script src="application.js"></script>
+</head>
+<body>
+<h1>Calcul Prix Total</h1>
+<h2>Johan AMADORI</h2>
+<fieldset>
+<legend>Saisie utilisateur</legend>
+<div>
+  <label for="montantHT">Montant HT</label>
+  <input id="montantHT" type="number" placeholder="Montant HT" oninput="calculerPrixTotal()" />
+</div>
+<div>
+  <label>Taux de TVA</label>
+  <input type="radio" id="taux0" name="tauxTVA" onclick="calculerPrixTotal()"/>
+  <label for="taux0">0%</label>
+  <input type="radio" id="taux10"  name="tauxTVA" onclick="calculerPrixTotal()"/>
+  <label for="taux10">10%</label>
+  <input type="radio" id="taux20"  name="tauxTVA"  onclick="calculerPrixTotal()"/>
+  <label for="taux20">20%</label>
+</div>
+
+<div>
+  <label>EcoTaxe</label>
+  <input type="radio" id="eco0" name="EcoTaxe" checked onclick="calculerPrixTotal()"/>
+  <label for="eco0">0€</label>
+  <input type="radio" id="eco2"  name="EcoTaxe" onclick="calculerPrixTotal()"/>
+  <label for="eco2">2€</label>
+  <input type="radio" id="eco5"  name="EcoTaxe" onclick="calculerPrixTotal()"/>
+  <label for="eco5">5€</label>
+</div>
+
+</fieldset>
+<!-- <button onclick="calculerTVA()">Calculer</button>-->
+<fieldset>
+<legend>Résultats</legend>
+<div> 
+  <label for="montantTVA">Montant TVA</label>
+  <input id="montantTVA" type="number" placeholder="Montant TVA" readonly/>
+</div>
+<div>
+  <label for="prixTTC">Prix TTC</label>
+  <input id="prixTTC" type="number" placeholder="Prix TTC" readonly/>
+</div>
+<div>
+  <label for="prixTotal">Prix Total</label>
+  <input id="prixTotal" type="number" placeholder="Prix Total" readonly/>
+</div>
+
+</fielset>   
+</body>
+</html>

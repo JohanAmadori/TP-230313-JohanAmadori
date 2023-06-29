@@ -1,0 +1,16 @@
+@media screen and (min-width: 767px) {
+    table {
+        display: block;
+        /* width: 100%; */
+        max-height: none;
+    }
+}
+table:not(.horizontal) {
+    max-height: none;
+}
+/* variable CSS */
+:root {
+    --table-head-back-color: deepskyblue;
+    --table-body-hover-back-color: orange;
+    --card-back-color: white;
+}
