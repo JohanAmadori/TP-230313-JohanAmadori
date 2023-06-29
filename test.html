@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        const students = [
+        {
+            name:'Johan',
+            notes:[6,14,13,10,12]
+        },
+        {
+            name:'Robert',
+            notes:[16,10,20,20,17]
+        },
+        {
+            name:'Math',
+            notes:[7,5,3,9,10]
+        },
+        {
+            name:'John',
+            notes:[1,16,11,3,4]
+        }
+
+        ]
+
+        const avg = (notes) => {
+            let sum = 0
+            for(let note of notes){
+                sum = sum + note
+            }
+            return sum / notes.length
+        }
+
+        for(let student of students){
+            student.avg = avg(student.notes)
+        }
+
+        console.log(students)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

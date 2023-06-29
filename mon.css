@@ -1,0 +1,11 @@
+@media screen and (min-width:700px){
+    table{
+        display:table;
+    }
+    
+}
+
+:root{
+    --table-head-back-color:blue;
+    --table-body-hover-back-color:orange;
+}

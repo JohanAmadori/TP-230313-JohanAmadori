@@ -1,43 +1,28 @@
-function calculerPrixTotal() {
-    // * 1 => to number
-    let montantHTvalue = montantHT.value * 1; 
-    let tauxTVAvalue;
-    if (taux20.checked) {
-        tauxTVAvalue = 0.2;
-    } else if (taux10.checked) {
-        tauxTVAvalue = 0.1;
-    } else if (taux0.checked) {
-        tauxTVAvalue = 0;
-    } else {
-        console.log('Taux TVA inconnu');
-    }
-    let montantTVAvalue = montantHTvalue * tauxTVAvalue;
-    let prixTTCvalue = montantHTvalue + montantTVAvalue;
+function calculerTVA(){
+    let MontantHTvalue = MontantHT.value;
+    let TauxTVAvalue;
 
-    montantTVA.value = montantTVAvalue.toFixed(2);
-    prixTTC.value = prixTTCvalue.toFixed(2);
-
-    if (eco0.checked) {
-        EcoTaxevalue = 0;
-    } else if (eco2.checked) {
-        EcoTaxevalue = 2;
-    } else if (eco5.checked) {
-        EcoTaxevalue = 5;
-    } else {
-        console.log('Taux Eco inconnu');
+    if (Taux0.checked){
+        TauxTVAvalue = 0         
     }
 
-    prixTotalvalue = prixTTCvalue + EcoTaxevalue;
-    prixTotal.value = prixTotalvalue.toFixed(2);
+    if (Taux10.checked){
+        TauxTVAvalue = 0.10   
+    }
+
+    else if (Taux20.checked){
+        TauxTVAvalue = 0.20    
+    }
+
+
+ let MontantTVAvalue = TauxTVAvalue * MontantHTvalue 
+ let MontantTTCvalue = MontantHTvalue * 1 + MontantTVAvalue 
+
+ MontantTVA.value = MontantTVAvalue.toFixed(2);
+ MontantTTC.value = MontantTTCvalue.toFixed(2);
+
+
 }
 
 
-
-
-
-
-
-
-function hello(message) {
-    alert(message);
-}
+/// MontantTVA = TauxTVA * MontantHT
